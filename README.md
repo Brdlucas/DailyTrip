@@ -30,10 +30,10 @@ Les plus +
 
 Parmi les éléments que nous avons besoins pour les médias ou autre de l'application, il nous faut :
 
-[x] Icons
-[x] Images
-[x] Polices d'écritures
-[x] Codes couleurs : #38b6ff #fba708 #0c274e
+- [x] Icons
+- [x] Images
+- [x] Polices d'écritures
+- [x] Codes couleurs : #38b6ff #fba708 #0c274e
 
 ## UI Design
 
@@ -46,3 +46,9 @@ La liste des compositions de l'interface de l'application :
 - Map
 - header, footer
 - Trip Header
+- Trip comments
+- Trip notes
+
+## Diagramme BDD
+
+https://drawsql.app/teams/agiliteach/diagrams/dailytrip
