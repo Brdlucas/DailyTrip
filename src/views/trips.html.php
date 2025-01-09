@@ -21,7 +21,7 @@ try {
 // function pour récupérer les éléments de la table trips
 function getInfo($pdo, $table)
 {
-    $query = "SELECT * FROM $table"; // On écrit la requête SQL
+    $query = "SELECT * FROM $table WHERE id BETWEEN 0 AND 20 "; // On écrit la requête SQL pas plus de 20 max
     $stmt = $pdo->prepare($query); // Préparation de la requête (statement)
     $stmt->execute(); // On exécute la requête
     $trips = $stmt->fetchAll(PDO::FETCH_ASSOC); // On retourne un tableau associatif
@@ -38,7 +38,7 @@ $ratings = getInfo($pdo, 'rating');
 
 
 <div>
-    <h1>trips</h1>
+    <h1 class="text-3xl text-center  m-5 uppercase font-semibold">trips</h1>
     <div class="mb-44 grid grid-cols-4 gap-10  justify-around max-w-screen-lg mx-auto">
         <!-- foreach pour chaque trips du table -->
         <?php foreach ($trips as $trip): ?>
@@ -56,8 +56,7 @@ $ratings = getInfo($pdo, 'rating');
                                     <?= $trip['title']; ?>
                                 </p>
                                 <div class="flex">
-                                    <!-- si le trip id est égal a l'id du trip alors on affiche la note -->
-
+                                    <!-- si le trip_id est égal a l'id du trip alors on affiche la note -->
                                     <!-- <?php foreach ($ratings as $rating): ?>
                                         <?= $rating['trip_id'] === $trip['id'] ? "<p>" . $rating['note'] . "</p>" :  false ?>
                                     <?php endforeach; ?> -->
