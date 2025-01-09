@@ -13,7 +13,5 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./src/assets/css/main.css">
-    <script src="../js/jquery.min.js" type="text/javascript"></script>
-    <script src="../js/jquery.easing.js" type="text/javascript"></script>
-    <script src="../js/counter.min.js" type="text/javascript"></script>
+    <script src="/src/assets/js/main.js"></script>
 </head>
