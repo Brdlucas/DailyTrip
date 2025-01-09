@@ -92,7 +92,7 @@ function insertReview($pdo, $faker)
 insertCategory($pdo, $faker, $categories);
 
 // Insérer des trips, reviews et ratings
-for ($i = 0; $i < 100; $i++) {
+for ($i = 0; $i < 10; $i++) {
     insertTrip($pdo, $faker, $categories);
 }
 

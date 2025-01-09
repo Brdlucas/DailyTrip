@@ -38,16 +38,16 @@ try {
         // "DROP TABLE images",
         // "DROP TABLE gallery_images",
 
-        // "CREATE TABLE IF NOT EXISTS `gallery`(`id` INT PRIMARY KEY  AUTO_INCREMENT)",
-        // "CREATE TABLE IF NOT EXISTS `images`(`id` INT PRIMARY KEY  AUTO_INCREMENT)",
-        // "CREATE TABLE IF NOT EXISTS `gallery_images`(`id` INT PRIMARY KEY  AUTO_INCREMENT, `gallery_id` INT, `image_id` INT)",
-        // "CREATE TABLE IF NOT EXISTS `admin`(`id` INT PRIMARY KEY  AUTO_INCREMENT, `email` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL)",
-        // "CREATE TABLE IF NOT EXISTS `category` (`id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT, `name` VARCHAR(255) NOT NULL, `image` VARCHAR(255) NOT NULL)",
-        // "CREATE TABLE IF NOT EXISTS `rating`(`id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT, `note` BIGINT, `ip_address` VARCHAR(255) NOT NULL, `trip_id` INT)",
-        // "CREATE TABLE IF NOT EXISTS `review`(`id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT, `fullname` VARCHAR(255) NOT NULL, `content` TEXT, `email` VARCHAR(255) NOT NULL, `trip_id` INT)",
-        // "CREATE TABLE IF NOT EXISTS `poi`(`id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT, `point` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, localisation_id INT, gallery_id INT)",
-        // "CREATE TABLE IF NOT EXISTS `localisation`(`id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT, `start` VARCHAR(255) NOT NULL, `finish` VARCHAR(255) NOT NULL, `distance` DECIMAL(8,2), `duration` TIME)",
-        // "CREATE TABLE IF NOT EXISTS `trips`(`id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT, `ref` VARCHAR(255) NOT NULL, `title` VARCHAR(255) NOT NULL, `description` VARCHAR(255) NOT NULL, `cover` VARCHAR(255) NOT NULL, `email` VARCHAR(255) NOT NULL, localisation_id INT,  status BOOLEAN, category_id INT, gallery_id INT)",
+        "CREATE TABLE IF NOT EXISTS `gallery`(`id` INT PRIMARY KEY  AUTO_INCREMENT)",
+        "CREATE TABLE IF NOT EXISTS `images`(`id` INT PRIMARY KEY  AUTO_INCREMENT)",
+        "CREATE TABLE IF NOT EXISTS `gallery_images`(`id` INT PRIMARY KEY  AUTO_INCREMENT, `gallery_id` INT, `image_id` INT)",
+        "CREATE TABLE IF NOT EXISTS `admin`(`id` INT PRIMARY KEY  AUTO_INCREMENT, `email` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL)",
+        "CREATE TABLE IF NOT EXISTS `category` (`id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT, `name` VARCHAR(255) NOT NULL, `image` VARCHAR(255) NOT NULL)",
+        "CREATE TABLE IF NOT EXISTS `rating`(`id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT, `note` BIGINT, `ip_address` VARCHAR(255) NOT NULL, `trip_id` INT)",
+        "CREATE TABLE IF NOT EXISTS `review`(`id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT, `fullname` VARCHAR(255) NOT NULL, `content` TEXT, `email` VARCHAR(255) NOT NULL, `trip_id` INT)",
+        "CREATE TABLE IF NOT EXISTS `poi`(`id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT, `point` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, localisation_id INT, gallery_id INT)",
+        "CREATE TABLE IF NOT EXISTS `localisation`(`id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT, `start` VARCHAR(255) NOT NULL, `finish` VARCHAR(255) NOT NULL, `distance` DECIMAL(8,2), `duration` TIME)",
+        "CREATE TABLE IF NOT EXISTS `trips`(`id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT, `ref` VARCHAR(255) NOT NULL, `title` VARCHAR(255) NOT NULL, `description` VARCHAR(255) NOT NULL, `cover` VARCHAR(255) NOT NULL, `email` VARCHAR(255) NOT NULL, localisation_id INT,  status BOOLEAN, category_id INT, gallery_id INT)",
 
     ];
 
@@ -80,15 +80,15 @@ try {
 
 
         // ajouter des clé étrangères 
-        // "ALTER TABLE trips ADD CONSTRAINT FOREIGN KEY (gallery_id) REFERENCES gallery(id)",
-        // "ALTER TABLE trips ADD CONSTRAINT FOREIGN KEY (category_id) REFERENCES category(id)",
-        // "ALTER TABLE trips ADD CONSTRAINT FOREIGN KEY (localisation_id) REFERENCES localisation(id)",
-        // "ALTER TABLE poi ADD CONSTRAINT FOREIGN KEY (gallery_id) REFERENCES gallery(id)",
-        // "ALTER TABLE poi ADD CONSTRAINT FOREIGN KEY (localisation_id) REFERENCES localisation(id)",
-        // "ALTER TABLE gallery_images ADD CONSTRAINT FOREIGN KEY (image_id) REFERENCES images(id)",
-        // "ALTER TABLE gallery_images ADD CONSTRAINT FOREIGN KEY (gallery_id) REFERENCES gallery(id)",
-        // "ALTER TABLE review ADD CONSTRAINT FOREIGN KEY (trip_id) REFERENCES trips(id)",
-        // "ALTER TABLE rating ADD CONSTRAINT FOREIGN KEY (trip_id) REFERENCES trips(id)",
+        "ALTER TABLE trips ADD CONSTRAINT FOREIGN KEY (gallery_id) REFERENCES gallery(id)",
+        "ALTER TABLE trips ADD CONSTRAINT FOREIGN KEY (category_id) REFERENCES category(id)",
+        "ALTER TABLE trips ADD CONSTRAINT FOREIGN KEY (localisation_id) REFERENCES localisation(id)",
+        "ALTER TABLE poi ADD CONSTRAINT FOREIGN KEY (gallery_id) REFERENCES gallery(id)",
+        "ALTER TABLE poi ADD CONSTRAINT FOREIGN KEY (localisation_id) REFERENCES localisation(id)",
+        "ALTER TABLE gallery_images ADD CONSTRAINT FOREIGN KEY (image_id) REFERENCES images(id)",
+        "ALTER TABLE gallery_images ADD CONSTRAINT FOREIGN KEY (gallery_id) REFERENCES gallery(id)",
+        "ALTER TABLE review ADD CONSTRAINT FOREIGN KEY (trip_id) REFERENCES trips(id)",
+        "ALTER TABLE rating ADD CONSTRAINT FOREIGN KEY (trip_id) REFERENCES trips(id)",
 
     ];
 
