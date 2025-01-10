@@ -74,7 +74,7 @@ class Router
             if ($trip) {
                 // Si le trip est trouvé, on le stocke dans les paramètres
                 $this->params['trip'] = $trip;
-                require_once './src/views/trip.html.php';
+                require_once './src/views/trips.html.php';
             } else {
                 // Si le trip n'est pas trouvé, on affiche la page 404
                 require_once './src/views/404.html.php';
